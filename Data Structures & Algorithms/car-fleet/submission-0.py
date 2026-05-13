@@ -1,0 +1,2 @@
+class Solution:
+    def carFleet(self, target: int, position: List[int], speed: List[int]) -> int: m = 0; return sum(1 for _, t in (sorted(((p, (target - p)/s) for p, s in zip(position, speed)), key = lambda x: x[0], reverse=True)) if t > m and (m:=t))
